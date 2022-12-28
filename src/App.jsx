@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './App.css'
 import Particle from './components/Particle'
+import WeatherApp from './components/WeatherApp'
 
 function App() {
 
   return (
     <>
       <Particle/>
-        <div>DEV</div>
+      <WeatherApp/>
     </>
   )
 }

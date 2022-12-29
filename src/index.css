@@ -38,6 +38,9 @@ main {
   box-shadow: 0px 10px 33px -17px rgba(173, 173, 173, 1);
   width: 100%;
 }
+.container h2{
+  text-align: center;
+}
 form {
   width: 100%;
 }
@@ -80,32 +83,25 @@ input[type="submit"]:hover {
   background-color: #0369a1;
 }
 
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.weather>p{
+.weather > p {
   font-size: 3rem;
   font-family: "Inter", sans-serif;
 }
 
-.weather>p>span{
+.weather > p > span {
   font-size: 3.1rem;
 }
 
-.weather p{
+.weather p {
   text-align: center;
   margin: 0;
 }
 
-.weather span{
+.weather span {
   font-size: 1.2rem;
 }
 
-.temp-min-max{
+.temp-min-max {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -224,6 +220,13 @@ input[type="submit"]:hover {
 }
 
 /* loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .spinner {
   width: 40px;
   height: 40px;
@@ -232,7 +235,8 @@ input[type="submit"]:hover {
   margin: 100px auto;
 }
 
-.double-bounce1, .double-bounce2 {
+.double-bounce1,
+.double-bounce2 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -241,27 +245,34 @@ input[type="submit"]:hover {
   position: absolute;
   top: 0;
   left: 0;
-  
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
 }
 
 .double-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
 }
 
 @-webkit-keyframes sk-bounce {
-  0%, 100% { -webkit-transform: scale(0.0) }
-  50% { -webkit-transform: scale(1.0) }
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes sk-bounce {
-  0%, 100% { 
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 50% { 
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }

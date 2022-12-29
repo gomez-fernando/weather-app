@@ -1,16 +1,25 @@
 import useWeather from "../hooks/UseWeather"
+import Loading from "./Loading"
+import NoResults from "./NoResults"
 import Result from "./Result"
 import WeatherForm from "./WeatherForm"
 
 const WeatherApp = () => {
-  const { result } = useWeather()
+  const { result, loading, noResults } = useWeather()
 
   return (
     <>
       <main className="two-columns">
         <WeatherForm />
 
-        {result?.name && <Result />}
+        {
+          !!loading ? <Loading /> :
+
+            result?.name ? <Result /> :
+              noResults ? <NoResults/> :
+              null
+        }
+
       </main>
     </>
   )

@@ -14,6 +14,7 @@ const WeatherForm = () => {
       return;
     }
 
+    setAlert('')
     requestWeather(search)
   }
 

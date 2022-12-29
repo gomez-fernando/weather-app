@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <h1>El clima en tu ciudad</h1>
+        <h1>El clima en el mundo</h1>
 
         <div id="light">
           <div id="lineh1"></div>
